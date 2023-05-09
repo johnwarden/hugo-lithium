@@ -316,21 +316,21 @@ img {
     float: right;
   }
 
-  a.archive-summary {
+  a.archive-item-summary {
     color: #333;
     text-decoration: none;
-    font-size: .8em;
+    font-size: .9em;
     text-align: left;
     display: block;
   }
 
-  a.archive-summary:visited {
+  a.archive-item-summary:visited {
     color: #333;
     text-decoration: none;
 
   }
 
-  .archive-summary .read-more {
+  .archive-item-summary .read-more {
     text-decoration: underline;
   }
 
