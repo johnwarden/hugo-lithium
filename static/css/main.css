@@ -300,7 +300,26 @@ img {
   .archive-item-date {
     font-size: 19px;
     text-align: right;
+    display: inline;
     float: right;
+  }
+
+  a.archive-summary {
+    color: #333;
+    text-decoration: none;
+    font-size: .8em;
+    text-align: left;
+    display: block;
+  }
+
+  a.archive-summary:visited {
+    color: #333;
+    text-decoration: none;
+
+  }
+
+  .archive-summary .read-more {
+    text-decoration: underline;
   }
 
   .archive-item-link {
