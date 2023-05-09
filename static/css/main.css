@@ -114,6 +114,11 @@ img {
   color: #ccc;
 }
 
+.article-author {
+  color: #ccc;
+  margin-left: 20px;
+}
+
 .article-duration {
   margin-top: 12px;
   float: right;
