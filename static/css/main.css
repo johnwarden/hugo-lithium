@@ -209,6 +209,13 @@ img {
   border-bottom-color: #222;
 }
 
+.archive-item-author {
+  color: #555;
+  font-size: .8em;
+  padding: 0px 0;
+  margin: 0px;
+}
+
 .footer {
   padding: 25px 0;
   text-align: center;
