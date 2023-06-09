@@ -1,6 +1,6 @@
-{{- with $.Params.image -}}
+{{- if $.Params.image -}}
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="{{ . | absURL }}"/>
+<meta name="twitter:image" content='{{ printf "%s%s" $.Permalink $.Params.image }}'/>
 {{ else -}}
 {{- $image := $.Resources.ByType "image" -}}
 {{- $featured := $image.GetMatch "*feature*" -}}
