@@ -15,7 +15,13 @@
     {{ end }}
 
     {{ if .Params.image }} 
-      <img class="featured-image" src="{{ .Params.image }}" loading="lazy" alt="Featured image of post {{ .Title }}" />
+
+      {{ $image := .Resources.GetMatch .Params.image }}
+      {{ $image := $image.Resize "600x" }}
+      {{ with $image }}
+        <img class="featured-image" src="{{ $image.RelPermalink }}" loading="lazy" alt="Featured image of post {{ $.Title }}" >
+      {{ end }}
+
     {{ end }}
 
     <div class="article-content">
