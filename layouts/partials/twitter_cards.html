@@ -1,6 +1,14 @@
 {{- if $.Params.image -}}
+
+
+
+{{ $image := .Resources.GetMatch .Params.image }}
+{{ $image := $image.Resize "600x" }}
+
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content='{{ printf "%s%s" $.Permalink $.Params.image }}'/>
+<meta name="twitter:image" content='{{ path.Join $.Site.BaseURL $image.RelPermalink }}'/>
+
+
 {{ else -}}
 {{- $image := $.Resources.ByType "image" -}}
 {{- $featured := $image.GetMatch "*feature*" -}}
