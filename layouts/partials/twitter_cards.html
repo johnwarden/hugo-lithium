@@ -5,8 +5,11 @@
 {{ $image := .Resources.GetMatch .Params.image }}
 {{ $image := $image.Resize "600x" }}
 
+{{ $siteURL := urls.Parse .Site.BaseURL  }}
+
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content='{{ path.Join $.Site.BaseURL $image.RelPermalink }}'/>
+<meta name="twitter:image" content='{{ printf "%s://%s%s" $siteURL.Scheme $siteURL.Host $image.RelPermalink }}'/>
+<meta name="twitter:image:alt" content="Featured image of post {{ $.Title }}{{if $.Params.image_alt}}: {{$.Params.image_alt}}{{end}}"/>
 
 
 {{ else -}}
