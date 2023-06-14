@@ -19,7 +19,7 @@
       {{ $image := .Resources.GetMatch .Params.image }}
       {{ $image := $image.Resize "600x" }}
       {{ with $image }}
-        <img class="featured-image" src="{{ $image.RelPermalink }}" loading="lazy" alt="Featured image of post {{ $.Title }}" >
+        <img class="featured-image" src="{{ $image.RelPermalink }}" loading="lazy" alt="Featured image of post {{ $.Title }}{{if $.Params.image_alt}}: {{$.Params.image_alt}}{{end}}" >
       {{ end }}
 
     {{ end }}
