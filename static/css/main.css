@@ -46,7 +46,7 @@ img {
 }
 
 .nav {
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 0 15px;
   text-align: right;
@@ -82,7 +82,7 @@ img {
 }
 
 .nav-title {
-  margin: 0 0 0 50px;
+  margin: 0;
   font-size: 1em;
   float: left;
   text-decoration: none;
@@ -306,7 +306,7 @@ a.archive-item-summary:visited {
   }
 
   .nav-title {
-    margin: 0 0 0 50px;
+    margin: 0;
     font-size: 1.2em;
     float: left;
     text-decoration: none;
