@@ -26,16 +26,16 @@
 
     <div class="article-content">
       {{ .Content }}
-    </div>
 
-    {{ if .Params.canonical_url }}
-      {{ $url := urls.Parse .Params.canonical_url }}
-      {{ $siteURL := urls.Parse .Site.BaseURL  }}
+      {{ if .Params.canonical_url }}
+        {{ $url := urls.Parse .Params.canonical_url }}
+        {{ $siteURL := urls.Parse .Site.BaseURL  }}
 
-      {{ if (ne $url.Host $siteURL.Host) }}
-          <em>Originally posted on <a href="{{ .Params.canonical_url }}">{{ $url.Host }}</a>.</em>
+        {{ if (ne $url.Host $siteURL.Host) }}
+            <em>Originally posted on <a href="{{ .Params.canonical_url }}">{{ $url.Host }}</a>.</em>
+        {{ end }}
       {{ end }}
-    {{ end }}
+    </div>
 
   </article>
 
